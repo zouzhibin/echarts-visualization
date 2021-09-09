@@ -1,0 +1,180 @@
+.box {
+  width: 100%;
+  padding: 16px 30px;
+  // background: #030409;
+
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .tabs {
+    display: flex;
+    color: #7489B0;
+    justify-content: space-between;
+    padding: 0 6%;
+
+    li {
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 2px;
+        height: 12px;
+        background: #1370B9;
+        margin-right: 4px;
+      }
+    }
+
+    .active {
+      color: #FCFCF9;
+
+      &::before {
+        background: #20A7FC;
+      }
+    }
+  }
+
+  .chart {
+    width: 100%;
+    height: 200px;
+    position: relative;
+
+    .tips {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      right: 10px;
+      top: 10px;
+      font-size: 12px;
+      color: #7B90B7;
+
+      &>span {
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 4px;
+          height: 4px;
+          background: red;
+          margin-right: 4px;
+        }
+
+        &:nth-of-type(1) {
+          &::before {
+            background: #2E51AD;
+          }
+        }
+
+        &:nth-of-type(2) {
+          &::before {
+            background: #60A5FC;
+          }
+        }
+      }
+
+
+    }
+  }
+
+  h2 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #FCFCF9;
+  }
+
+  .chart2 {
+    display: flex;
+    align-items: center;
+    ul {
+      width: 60%;
+      padding-left: 20px;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      i {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        vertical-align: middle;
+        border-radius: 2px;
+        margin-right: 6px;
+      }
+      span {
+        &:nth-of-type(1) {
+          color: #97A5CA;
+          flex: 1;
+          font-size: 12px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        &:nth-of-type(2) {
+          color: #3CB2DE;
+          font-size: 14px;
+          max-width: 80px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+// chart 内部样式修改
+:global {
+  .active-ring-info {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 54px;
+      height: 54px;
+      border: 1px solid #445378;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border: 1px solid #445378;
+      border-radius: 50%;
+    }
+  }
+
+  .active-ring-chart-container {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 116px;
+      height: 116px;
+      border: 1px solid #445378;
+      border-radius: 50%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    canvas {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .dv-active-ring-chart .active-ring-info {
+    flex-direction: column-reverse !important;
+    padding: 25px 0;
+  }
+
+  .active-ring-name {
+    font-size: 12px !important;
+    color: #2A76A4 !important;
+  }
+}

@@ -1,0 +1,77 @@
+.box {
+  width: 100%;
+  padding: 16px 30px;
+  border: 1px solid #1e7eca;
+  flex: 1;
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  &>ul {
+    &>li {
+      display: flex;
+      align-items: center;
+
+      &:not(:nth-last-child(1)) {
+        margin-bottom: 30px;
+      }
+
+      .name {
+        width: 80px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+        color: gray;
+
+        // 占位图，请替换为图片
+        &>div {
+          width: 50px;
+          height: 50px;
+          border: 1px solid #5D6786;
+          line-height: 50px;
+          border-radius: 6px;
+          background: #25335a;
+        }
+      }
+
+      ul {
+        flex: 1;
+        display: flex;
+        height: 40px;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+
+        li {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+
+          &.line {
+
+            width: 2px;
+            height: 100%;
+            background: #8ABADA;
+          }
+
+          &.l {
+            color: #53855F;
+          }
+
+          &.m {
+            color: #96A894;
+          }
+
+          &.h {
+            color: #5A4277;
+          }
+        }
+      }
+    }
+
+  }
+}

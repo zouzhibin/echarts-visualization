@@ -1,0 +1,67 @@
+.driver{
+  border: 1px solid #1e7eca;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  .tabs {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    li {
+      padding: 2px 8px;
+      cursor: pointer;
+      border-radius: 4px;
+
+      &.active {
+        background: #25335A;
+        color: #fff;
+      }
+    }
+  }
+  .ant-progress-text{
+    color: white;
+  }
+  .item-circle{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    span{
+      margin-top: 4px;
+    }
+    //width: 70px;
+    //height: 70px;
+  }
+  .item-circle-wrap{
+    margin-top: 15px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .driver-header{
+    flex: 0.9;
+  }
+  .driver-footer{
+    padding: 8px;
+    flex: 1.3;
+    display: flex;
+    flex-direction: column;
+    .total-header{
+      display: flex;
+      align-items: center;
+    }
+    .total-footer{
+      text-align: right;
+      span{
+        font-size: 15px;
+        font-weight: normal;
+        font-style: italic;
+        color: #1A9FEB;
+      }
+    }
+  }
+
+}
